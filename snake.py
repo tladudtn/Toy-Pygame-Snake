@@ -6,8 +6,8 @@ import time
 pygame.init()
 
 # 해상도 지정
-screen_width = 600
-screen_height = 600
+screen_width = 300
+screen_height = 300
 screen = pygame.display.set_mode((screen_height,screen_width))
 
 # 색깔
@@ -24,11 +24,11 @@ snake_size = 10
 
 clock = pygame.time.Clock()
 
-
+# 택스트 출력 - 0
 def text_objects(text, font):
     textSurface = font.render(text, True, white)
     return textSurface, textSurface.get_rect()
-
+# 택스트 출력 - 1
 def message_display(text):
     x_msg = 10
     y_msg = 10
@@ -39,10 +39,12 @@ def message_display(text):
 
     pygame.display.update()
 
+# 뱀 길이 늘리는 함수
 def snakelong(snake_size, snake_list):
     for x1 in snake_list:
         pygame.draw.rect(screen ,green, [x1[0], x1[1], snake_size, snake_size])
 
+# 게임 작동 중 돌아가는 것
 def snakeWorking():
 
     game_over=False
@@ -65,7 +67,7 @@ def snakeWorking():
     # (while문 동작시 종료되지 않음)
     while not game_over:
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:
+            if event.type == pygame.QUIT:           
                 game_over = True
             #print(event) 
             
@@ -85,7 +87,7 @@ def snakeWorking():
                     y_update = 0
                 
         # 게임 오버 조건
-        if x <= 0 or x >= screen_width+5 or y <= 0 or y >= screen_height + 5 :
+        if x <= 0 or x >= screen_width or y <= 0 or y >= screen_height : 
             game_over=True
 
 
