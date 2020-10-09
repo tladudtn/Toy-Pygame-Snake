@@ -1,17 +1,13 @@
 # Toy-Pygame-Snake
 
-## using
-```
- python 3.8.2, pygame
-```
-
 ## activite Python virtual ENV
- ### linux
+ ### Linux
 ```linux
  cd ./VENV/bin
  source activite
 ```
-### window
+
+### Window
 ```cmd
  cd .\VENV\bin
  ./activite.bat
