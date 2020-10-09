@@ -17,4 +17,9 @@
  ./activite.bat
 ```
 
+## Package Install - Python 3.8.x
+```bash
+ pip install pygame==2.0.0.dev6
+```
+
 
